@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BilletSystemCL</name>
+    </assembly>
+    <members>
+        <member name="M:BilletSystemCL.BIl.Pris">
+            <summary>
+            Bilens grund pris samt dens brobizz
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BilletSystemCL.MC.Pris">
+            <summary>
+            Motorcyklens grund pris samt dens brobizz
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
