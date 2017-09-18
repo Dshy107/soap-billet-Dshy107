@@ -17,6 +17,10 @@ namespace WcfBillet
         [OperationContract]
         int GetMCPris();
         [OperationContract]
+        int MCRabat();
+        [OperationContract]
+        int BilRabat();
+        [OperationContract]
         string GetData(int value);
 
         [OperationContract]

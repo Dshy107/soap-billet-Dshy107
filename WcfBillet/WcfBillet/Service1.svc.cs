@@ -13,6 +13,13 @@ namespace WcfBillet
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public int BilRabat()
+        {
+            var bilRabat = new BIl();
+            bilRabat.BroBizz = true;
+            return bilRabat.Pris();
+        }
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
@@ -37,6 +44,13 @@ namespace WcfBillet
             var mc = new MC();
             return mc.Pris();
             
+        }
+
+        public int MCRabat()
+        {
+            var mcRabat = new MC();
+            mcRabat.BroBizz = true;
+            return mcRabat.Pris();
         }
 
         int IService1.GetBilPris()
