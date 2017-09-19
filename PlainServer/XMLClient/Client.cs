@@ -6,8 +6,9 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
-namespace PlainClient
+namespace XMLClient
 {
     class Client
     {
@@ -20,12 +21,14 @@ namespace PlainClient
             car.Color = "Red";
             car.RegNo = "El23400";
 
-            using (TcpClient socket = new TcpClient("localhost", 10001))
+            using (TcpClient socket = new TcpClient("localhost", 10002))
             using (NetworkStream ns = socket.GetStream())
             //using (StreamReader sr = new StreamReader(ns))
             using (StreamWriter sw = new StreamWriter(ns))
             {
-                sw.WriteLine(car);
+                XmlSerializer serializer = new XmlSerializer(typeof(Car));
+                serializer.Serialize(sw, car);
+               
                 sw.Flush();
 
                 //string incomingCar = sr.ReadLine();
