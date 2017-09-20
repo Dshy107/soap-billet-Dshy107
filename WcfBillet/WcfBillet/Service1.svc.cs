@@ -53,7 +53,7 @@ namespace WcfBillet
             return mcRabat.Pris();
         }
 
-        int IService1.GetBilPris()
+        public int GetBilPris()
         {
             var bil = new BIl();
             return bil.Pris();
